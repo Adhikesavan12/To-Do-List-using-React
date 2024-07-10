@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  color: white;
+  font-family: "Poppins";
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+.todo-input:focus {
+  outline: none;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-input::placeholder {
+  opacity: 0.2;
+  font-size: 18px;
+}
+
+form input,
+form button {
+  font-size: 1.5rem;
+  background: white;
+  padding: 0.5rem;
+  border: none;
+}
+
+form button {
+  color: #fc8a6a;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #fc8a6a;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  list-style-type: none;
+  min-width: 30%;
+}
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo-item {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+.trash-btn,
+.complete-btn {
+  background: #fc8a6a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background-color: rgb(73, 204, 73);
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #fc8a6a;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: white;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #fc8a6a;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background-color: white;
+  color: #ff6f47;
+}
+
+.custom-confirm-button:hover {
+  background: #ff6f47;
+  color: white;
+}
